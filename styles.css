@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.header-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #295aa9;
+}
+
+.title-cont {
+  text-align: center;
+  width: 100%;
+  border-bottom: 2px solid #547dbf;
+  padding: 1.5rem 2rem;
+}
+
+.title-cont h1 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.level-score {
+  width: 100%;
+  padding: 1.5rem 2rem;
+}
+
+.level-score-lists {
+  display: flex;
+  justify-content: space-between;
+}
+
+.level-score-lists li {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.level-cont {
+  display: flex;
+  align-items: center;
+}
+
+.flag {
+  width: 2.5rem;
+  height: auto;
+  color: orange;
+}
+
+/* //////////////////////////////////////////////////////////// */
+
+.hero-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+}
+
+.level-graph {
+  border-radius: 0.3rem;
+  min-height: 2rem;
+  width: 100%;
+  color: #a7a7a7;
+}
+
+progress::-webkit-progress-bar {
+  border: 1px solid #44444446;
+  background-color: #f2f2f2;
+  border-radius: 0.3rem;
+}
+
+.next-level-txt p {
+  font-size: 1.4rem;
+  color: #000;
+}
+
+/* //////////////////////////////////////////////////////////////// */
+
+.input-cont {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  border-top: 1px solid #44444446;
+  border-bottom: 1px solid #44444446;
+}
+
+.input-cont input {
+  width: 75%;
+  padding: 0 1rem;
+}
+
+.input-cont button {
+  padding: 1rem 0;
+  background: none;
+  background-color: #53b03b;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  width: 25%;
+  transition: all 0.3s;
+}
+
+.input-cont button:hover {
+  background-color: #377428;
+}
+
+progress::-webkit-progress-value {
+  transition: width 0.3s ease;
+}
+
+/* ////////////////////////////////////////////////////////////////// */
+
+.quests-cont {
+  border-bottom: 1px solid #44444446;
+  display: flex;
+  flex-direction: column;
+}
+
+.quests-title {
+  border-bottom: 1px solid #44444446;
+  padding: 1rem 2rem;
+}
+
+.quests-title h2 {
+  font-size: 1.8rem;
+}
+
+.quests-title p {
+  font-size: 1.4rem;
+  color: #154ea9;
+}
+
+.quest-lists {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.quest-lists li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #44444446;
+  font-size: 1.4rem;
+  transition: background-color 0.25s ease;
+}
+
+.quest-lists li:hover {
+  background-color: #f1f4f9;
+}
+
+.quest-lists li input[type="checkbox"] {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.quest-lists li:last-child {
+  border: none;
+}
+
+.checkbox-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.delete-btn {
+  padding: 1rem 1.5rem;
+  background-color: rgb(240, 0, 0);
+  border: none;
+  border-radius: 0.4rem;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: rgb(173, 0, 0);
+}
+
+.delete-btn {
+  opacity: 0;
+  transform: translateX(5px);
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+.quest-lists li:hover .delete-btn {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* ///////////////////////////////////////////////////////////// */
+
+.cards-cont {
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #44444446;
+  border-radius: 0.3rem;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card-header {
+  border-bottom: 1px solid #44444446;
+}
+
+.card-header h3 {
+  font-size: 1.6rem;
+  color: #154ea9;
+  padding: 1rem;
+}
+
+.card-txts {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-txts p {
+  font-size: 1.4rem;
+}
+
+.gift-cont {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gift-icon {
+  width: 2.5rem;
+  height: auto;
+}
+
+.fire-cont {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fire-icon {
+  width: 2.5rem;
+  height: auto;
+}

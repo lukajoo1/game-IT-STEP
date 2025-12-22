@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-cont">
+        <div class="title-cont">
+          <h1>Gamified To-Do List</h1>
+        </div>
+        <div class="level-score">
+          <ul class="level-score-lists">
+            <li class="level-cont">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="flag"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M80 464V68.14a8 8 0 014-6.9C91.81 56.66 112.92 48 160 48c64 0 145 48 192 48a199.53 199.53 0 0077.23-15.77 2 2 0 012.77 1.85v219.36a4 4 0 01-2.39 3.65C421.37 308.7 392.33 320 352 320c-48 0-128-32-192-32s-80 16-80 16"
+                  fill="currentColor"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-miterlimit="10"
+                  stroke-width="32"
+                /></svg
+              ><span>level 1: Adventurer</span>
+            </li>
+            <li class="score-xp"></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="hero-cont">
+          <div class="next-level-txt">
+            <p>Next level. 0/100 XP</p>
+          </div>
+          <progress max="100" value="0" class="level-graph"></progress>
+        </div>
+      </section>
+
+      <section class="input-section">
+        <div class="input-cont">
+          <input
+            id="input"
+            type="text"
+            name="task"
+            placeholder="Add a new task..."
+          />
+          <button id="add-task-btn" type="submit">Add Task</button>
+        </div>
+      </section>
+
+      <section class="quests-section">
+        <div class="quests-cont">
+          <div class="quests-title">
+            <h2>Daily Quests</h2>
+            <p>Complete tasks to earn points!</p>
+          </div>
+          <div class="quests">
+            <ul class="quest-lists"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="cards-section">
+        <div class="cards-cont">
+          <div class="card">
+            <div class="card-header">
+              <h3>Daily bonus:</h3>
+            </div>
+            <div class="card-txts">
+              <p class="card-paragraph"></p>
+              <p class="gift-cont">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="gift-icon"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M256 104v56h56a56 56 0 10-56-56zM256 104v56h-56a56 56 0 1156-56z"
+                    fill="orange"
+                    stroke="#af7200"
+                    stroke-linecap="round"
+                    stroke-miterlimit="10"
+                    stroke-width="32"
+                  />
+                  <rect
+                    x="64"
+                    y="160"
+                    width="384"
+                    height="112"
+                    rx="32"
+                    ry="32"
+                    fill="#c66c2b"
+                    stroke="orange"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  />
+                  <path
+                    d="M416 272v144a48 48 0 01-48 48H144a48 48 0 01-48-48V272M256 160v304"
+                    fill="orangered"
+                    stroke="orange"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  /></svg
+                ><span>+20 XP bonus!</span>
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h3>Current streak:</h3>
+            </div>
+            <div class="card-txts">
+              <p class="fire-cont">
+                <span>5 Days in a Row</span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="fire-icon"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M112 320c0-93 124-165 96-272 66 0 192 96 192 272a144 144 0 01-288 0z"
+                    fill="orange"
+                    stroke="orange"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  />
+                  <path
+                    d="M320 368c0 57.71-32 80-64 80s-64-22.29-64-80 40-86 32-128c42 0 96 70.29 96 128z"
+                    fill="yellow"
+                    stroke="yellow"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  />
+                </svg>
+              </p>
+              <p>Keep it up!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
