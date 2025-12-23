@@ -10,15 +10,16 @@ const cardsTxt = document.querySelector(".card-txts");
 const cardP = document.querySelector(".card-paragraph");
 const cardHeader = document.querySelector(".card-header");
 const scoreXp = document.querySelector(".score-xp");
+const levels = document.querySelector(".levels");
+
+const ranks = ["Beginner", "Adventurer", "Explorer", "Expert", "Master"];
 
 let todoArr = [];
-let currentXP = 0;
 let totalXP = 0;
 let dailyMissionBonus = 0;
 const maxXP = 100;
 
 progress.max = maxXP;
-progress.value = currentXP;
 
 if (localStorage.getItem("tasks")) {
   todoArr = JSON.parse(localStorage.getItem("tasks"));
@@ -116,11 +117,24 @@ function updateProgress() {
     totalXP = baseXP;
   }
 
-  currentXP = Math.min(totalXP, maxXP);
+  let currentLevel = Math.floor(totalXP / maxXP) + 1;
 
-  progress.value = currentXP;
-  nextLevelText.textContent = `Next level. ${currentXP}/${maxXP} XP`;
-  scoreXp.textContent = `Total score: ${totalXP} XP`;
+  let levelProgressXP = totalXP % maxXP;
+
+  let rankIndex = Math.min(currentLevel - 1, ranks.length - 1);
+  let currentRank = ranks[rankIndex];
+
+  progress.value = levelProgressXP;
+
+  if (levels) {
+    levels.textContent = `level ${currentLevel}: ${currentRank}`;
+  }
+
+  nextLevelText.textContent = `Next level. ${levelProgressXP}/${maxXP} XP`;
+
+  if (scoreXp) {
+    scoreXp.textContent = `Total score: ${totalXP} XP`;
+  }
 
   saveToLocalStorage();
 }
